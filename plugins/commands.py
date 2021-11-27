@@ -138,7 +138,7 @@ async def start(client, message):
         ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
-    k = await message.reply(HOME_TEXT.format(message.from_user.first_name, message.from_user.id), reply_markup=reply_markup)
+    k = await message.reply_animation("https://media4.giphy.com/media/xT9IgA5X6o072yGhPi/giphy.gif", caption = HOME_TEXT.format(message.from_user.first_name, message.from_user.id), reply_markup=reply_markup)
     await delete_messages([message, k])
 
 
